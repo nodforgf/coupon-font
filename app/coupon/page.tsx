@@ -75,15 +75,6 @@ export default function CreateCoupon() {
             CONFIRM & SEND 💌
           </button>
         </form>
-
-        <div className="mt-6 text-center">
-          <button 
-            onClick={() => router.push('/all')}
-            className="text-pink-300 text-xs font-bold hover:text-pink-500 transition-colors"
-          >
-            ← กลับไปดูสมุดคูปอง
-          </button>
-        </div>
       </div>
     </div>
   );
