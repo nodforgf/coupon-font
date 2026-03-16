@@ -38,7 +38,7 @@ export default function CreateCoupon() {
 
         <header className="text-center mb-8">
           <h2 className="text-3xl font-black text-pink-600 italic tracking-tighter">CREATE REWARD</h2>
-          <p className="text-pink-300 text-xs font-bold mt-1 uppercase">อยากได้ไรสร้างคูปองเอา ✍️</p>
+          <p className="text-pink-300 text-xs font-bold mt-1 uppercase">อยากให้เค้าทำอะไรสร้างคูปองเลย ✍️</p>
         </header>
 
         <form onSubmit={handleSubmit} className="space-y-6">
