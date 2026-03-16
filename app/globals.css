@@ -1,26 +1,33 @@
 @import "tailwindcss";
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+@plugin "daisyui";
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fff1f2;
+}
+
+@layer utilities {
+  .hover-3d {
+    perspective: 1500px; /* เพิ่มมิติความลึก */
+    transform-style: preserve-3d;
+  }
+
+  .transform-style-3d {
+    transform-style: preserve-3d;
+  }
+
+  /* เลเยอร์หลัก: หมุนพริ้วๆ ตาม Bezier Curve */
+  .ticket-main {
+    transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+
+  /* ทำให้ตัวอักษรและไอคอนลอยออกมา (Parallax) */
+  .parallax-1 { transform: translateZ(30px); }
+  .parallax-2 { transform: translateZ(50px); }
+}
+
+/* เอฟเฟกต์ตอน Hover: ให้หมุนเอียงแบบมีมิติ */
+.hover-3d:hover .ticket-main {
+  transform: rotateX(12deg) rotateY(12deg);
 }
